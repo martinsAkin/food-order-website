@@ -1,12 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
  margin: 0;
  padding: 0;
  box-sizing: border-box;
+ user-select: none;
+ font-family: 'Roboto', serif;
 }
 #landingpage-Body{
  background: #3BC57A;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 320px) {
+  #main-attraction{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 5rem;
+   }
+   #main-attraction img{
+    height: 20rem;
+   }
+   #main-attraction span{
+     font-size: 30px;
+     display: inline-block;
+     margin-bottom: 1rem;
+   }
+   #main-attraction a{
+     text-decoration: none;
+   }
+   .viewMore-btn{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    color: grey;
+    font-size: 20px;
+   }
+  
+   /* Home page */
+   #homepage-body{
+    background-color: white;
+    padding: 1rem 0.5rem;
+    overflow: hidden;
+   }
+   .headbar{
+    display: flex;
+    justify-content: space-between;
+   }
+   #Work-Place{
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 40px;
+   }
+   #choose-your-meal{
+    display: inline-block;
+    display: block;
+    font-size: 20px;
+   }
+   .cartNotification{
+    i{
+      position: relative;
+    }
+    #item-count{
+      position: absolute;
+      top: 0;
+      background-color: red;
+      padding: 0.2rem 0.3rem;
+      border-radius: 50%;
+    }
+  
+   }
+   .food-Grid{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+   }
+   .food-choice{
+    border: 1px grey solid;
+    padding: 0.5rem;
+    border-radius: 10px;
+   }
+   .foodChoice{
+    display: flex;
+    justify-content: space-between;
+   }
+   .food-choice img{
+    margin-top: 1rem;
+    border-radius: 20%;
+    height: 12rem;
+    width: 12rem;
+    display: flex;
+    justify-self: center;
+   }
+   .description{
+    margin-top: 1rem;
+   }
+   .description .food-name{
+    font-size: 20px;
+    color: grey;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+   }
+   .purchase .price{
+    display: block;
+    color: green;
+    font-size: 25px;
+   }
+   .purchase{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .add-to-list{
+    border-radius: 50%;
+    background-color: grey;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+   }
+  
+   .fa-solid{
+    font-size: 30px;
+   }
+   /* .fa-solid fa-heart */
+   .fa-regular{
+    font-size: 30px;
+   }
+   .uil{
+    font-size: 25px;
+   }
+   #cart{
+    width: 90%;
+    border-radius: 10px;
+    padding: 0.5rem 1.5rem;
+    background-color: maroon;
+    color: white;
+    /* margin-top: 6rem; */
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    /* right: 50%; */
+  
+    hr{
+      color: white;
+      height: 0.01rem;
+      margin-top: 1rem;
+    }
+   }
+   #displayTotal{
+    display: flex;
+    justify-content: space-between;
+   }
+   #checkout{
+    padding: 1rem;
+    border-radius: 15px;
+    border: none;
+    margin-top: 1rem;
+    background-color: rgb(90, 43, 43);
+    color: white;
+    display: flex;
+    justify-self: center;
+   } 
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
 
  /* landing page */
  #main-attraction{
@@ -41,7 +203,7 @@
  /* Home page */
  #homepage-body{
   background-color: white;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
  }
  .headbar{
   display: flex;
@@ -57,15 +219,18 @@
   display: block;
   font-size: 20px;
  }
- .toggle-icons{
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-around;
- }
- .float-Icon{
-  padding: 1rem;
-  border-radius: 5px;
-  border: 1.5px grey solid;
+ .cartNotification{
+  i{
+    position: relative;
+  }
+  #item-count{
+    position: absolute;
+    top: 0;
+    background-color: red;
+    padding: 0.2rem 0.3rem;
+    border-radius: 50%;
+  }
+
  }
  .food-Grid{
   margin-top: 2rem;
@@ -75,7 +240,7 @@
  }
  .food-choice{
   border: 1px grey solid;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 10px;
  }
  .foodChoice{
@@ -126,131 +291,38 @@
  .uil{
   font-size: 25px;
  }
- #full-food-description{
-  position: relative;
-  display: none;
-  height: 55rem;
-  width: 24rem;
-  border: 1px solid green;
-  /* background-color: aquamarine; */
+ #cart{
+  width: 90%;
   border-radius: 10px;
- }
- #cancel{
-  margin: 1.5rem;
-  width: 2.5rem;
-  text-align: center;
-  padding: 0.5rem;
-  border-radius: 20px;
- }
- #cancel:hover{
-  background-color: red;
+  padding: 0.5rem 1.5rem;
+  background-color: maroon;
   color: white;
+  /* margin-top: 6rem; */
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  /* right: 50%; */
+
+  hr{
+    color: white;
+    height: 0.01rem;
+    margin-top: 1rem;
+  }
  }
- #full-food-description img{
-  margin-top: 2rem;
-  height: 20rem;
+ #displayTotal{
+  display: flex;
+  justify-content: space-between;
+ }
+ #checkout{
+  padding: 1rem;
+  border-radius: 15px;
+  border: none;
+  margin-top: 1rem;
+  background-color: rgb(90, 43, 43);
+  color: white;
   display: flex;
   justify-self: center;
  }
- #name, #price{
-  display: block;
- font-size: 25px;
- }
- #name{
-  font-size: 30px;
- }
- #price{
-  color: green;
-  font-weight: bold;
-  font-size: 35px;
- }
- #food-information{
-  padding: 2rem;
- }
- .info-header{
-  display: flex;
-  justify-content: space-between;
- }
- #increment-section{
-  display: flex;
-  text-align: center;
- }
- #value{
-  background-color: grey;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 0.3rem;
- }
- .increment{
-  height: 2rem;
-  width: 2rem;
-  color: white;
-  background-color: rgb(136, 132, 132);
-  border: none;
-  border-radius: 10px;
- }
- .increment:hover{
-  background-color: green;
- }
- #value{
-  width: 5rem;
-  height: 2rem;
-  background-color: rgb(182, 177, 177);
- }
- #recipe{
-  font-weight: 800;
-  font-size: xx-large;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  color: rgb(94, 92, 92);
- }
- #Recipe-lorem{
-  font-size: 20px;
-  color: rgb(94, 92, 92);
-  font-weight: bold;
- }
- .delivery{
-  color: grey;
- }
- .delivery section{
-  margin-top: 1rem;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
- }
-  .heading{
-   display: block;
-   font-size: 25px;
-   font-weight: bold;
-  }
- .icon{
-  padding: 1rem;
-  border: 2px solid grey;
-  width: 3rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
- }
- .cart-display{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 25px;
- }
- .cart-option{
-  font-size: 20px;
- }
- #add-to-cart{
-  position: absolute;
-  width: 100%;
-  top: 52rem;
-  left: 0;
-  padding: 0.5rem 2rem;
-  height: 3rem;
-  border-radius: 5px 5px 20px 20px;
-  background-color: green;
-  color: white;
- }
+ 
 }
