@@ -7,7 +7,7 @@
  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
  <link rel="stylesheet" href="food.css">
  <script src="https://www.paypal.com/sdk/js?client-id=ATJOaKKOBX8zhvzO-OJQDbt-aqo3gLuPCEJvU9CoYnnJ9BN8grP9B6OC0OG9WAKys2ynbB0z587R31wz"></script>
- <!-- <script defer src="foodApp.js"></script> -->
+ <script defer src="foodApp.js"></script>
 
  <title>D'ABSOLUTE KITCHEN</title>
 </head>
@@ -34,7 +34,7 @@
                         <div><i class="fa-solid fa-heart"></i></div>
                      </div>
                      <div>
-                        <img src="images/Ellipse 5.png" class="food-image">
+                        <img src="../images/Ellipse 5.png" class="food-image">
                      </div>
                      <section class="description">
                         <span class="food-name">Veg Noodles</span>
@@ -50,7 +50,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/Ellipse 5 (1).png" class="food-image">
+                  <img src="../images/Ellipse 5 (1).png" class="food-image">
                   </div>
                   <section class="description">
                   <span class="food-name">Cheese Pizza</span>
@@ -66,7 +66,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/Ellipse 5 (2).png" class="food-image">
+                  <img src="../images/Ellipse 5 (2).png" class="food-image">
                   </div>
                   <section class="description">
                   <span class="food-name">Burger</span>
@@ -83,7 +83,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/Ellipse 5 (3).png" class="food-image">
+                  <img src="../images/Ellipse 5 (3).png" class="food-image">
                   </div>
                
                   <section class="description">
@@ -101,7 +101,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/foodDiv.png" class="food-image">
+                  <img src="../images/foodDiv.png" class="food-image">
                   </div>
                
                   <section class="description">
@@ -118,7 +118,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/Haitian Spaghetti.jpeg" class="food-image">
+                  <img src="../images/Haitian Spaghetti.jpeg" class="food-image">
                   </div>
                   <section class="description">
                   <span class="food-name">Haitian Spagetti</span>
@@ -135,7 +135,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/The Ultimate Crispy Baked Wings.jpeg" class="food-image">
+                  <img src="../images/The Ultimate Crispy Baked Wings.jpeg" class="food-image">
                   </div>
                   <section class="description">
                   <span class="food-name">Baked Chicken Wings</span>
@@ -152,7 +152,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/Efo riro.jpeg" class="food-image">
+                  <img src="../images/Efo riro.jpeg" class="food-image">
                   </div>
                   <section class="description">
                   <span class="food-name">Assorted Efo-Riro</span>
@@ -169,7 +169,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/Nigerian Moi Moi with Beans Flour.jpeg" class="food-image">
+                  <img src="../images/Nigerian Moi Moi with Beans Flour.jpeg" class="food-image">
                   </div>
                   <section class="description">
                   <span class="food-name">Moi-Moi</span>
@@ -186,7 +186,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/Strawberry Banana Smoothie (+ Easy Recipe).jpeg" class="food-image">
+                  <img src="../images/Strawberry Banana Smoothie (+ Easy Recipe).jpeg" class="food-image">
                   </div>
                   <section class="description">
                   <span class="food-name">Strawberry Banana Smoothie</span>
@@ -203,7 +203,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/Best Keema Samosa Recipe (Patti Samosa) - Cubes N Juliennes.jpeg" class="food-image">
+                  <img src="../images/Best Keema Samosa Recipe (Patti Samosa) - Cubes N Juliennes.jpeg" class="food-image">
                   </div>
                   <section class="description">
                   <span class="food-name">Keema Samosa</span>
@@ -220,7 +220,7 @@
                      <div><i class="fa-solid fa-heart"></i></div>
                   </div>
                   <div>
-                  <img src="images/Mouthwatering Cheesy Garlic Bread Recipe_ Easy & Delicious!.jpeg" class="food-image">
+                  <img src="../images/Mouthwatering Cheesy Garlic Bread Recipe_ Easy & Delicious!.jpeg" class="food-image">
                   </div>
                   <section class="description">
                   <span class="food-name">Garlic Bread</span>
@@ -245,7 +245,7 @@
          TOTAL: <span>$<span id="order-total">0</span></span>
       </div>
       <!-- <button id="checkout">Proceed to Checkout</button> -->
-      <div id="paypal-button-container"></div>
+      <div id="paypal-button-container" style="margin-top: 2rem;"></div>
 
    </div>
 
@@ -269,129 +269,135 @@
                         }
                      }]
                   });
+            }, 
+            onApprove: function (data, actions){
+               return
+               actions.order.capture().then(function (details){
+                  alert("Payment Successful! Thank you, " + details.payer.name.given_name);
+               });
             }
          }).render('#paypal-button-container')
       // }
          
 
 
-         let currentFood = { name: "", price: 0 };
-let cartCount = 0;
+//          let currentFood = { name: "", price: 0 };
+// let cartCount = 0;
 
-document.querySelectorAll('.add-to-list').forEach(button => {
- button.addEventListener('click', function full_description() {
-     const name = this.getAttribute('food-name');
-     const price = parseFloat(this.getAttribute('food-price'));
-    //  const image_link = button.getAttribute('image-link');
+// document.querySelectorAll('.add-to-list').forEach(button => {
+//  button.addEventListener('click', function full_description() {
+//      const name = this.getAttribute('food-name');
+//      const price = parseFloat(this.getAttribute('food-price'));
+//     //  const image_link = button.getAttribute('image-link');
 
 
-     currentFood = { name, price};
-     addToCart(name, price)
+//      currentFood = { name, price};
+//      addToCart(name, price)
      
- });
-});
+//  });
+// });
 
-let cartPopUp = document.getElementById('cartBtn');
-let cart = document.getElementById('cart')
-cart.style.display = 'none'
-let cartClicked = false
-function popUpCart(){
-    cartClicked = !cartClicked
-    if (cartClicked) {
-        cart.style.display = 'block'
-    } else{
-        cart.style.display = 'none'
-    }
-}
-cartPopUp.addEventListener('click', popUpCart)
-
-
-const cartItems = [];
-const orderTotal = document.getElementById('order-total');
-
-function updateCart() {
-    const cartItemsList = document.getElementById('lists');
-    const itemCount = document.getElementById('item-count'); // Total item count element
-   //  const orderTotal = document.getElementById('order-total'); // Total price element
-
-    cartItemsList.innerHTML = ''; // Clear the cart list
-    let total = 0;
-    let count = 0;
-
-    cartItems.forEach((item, index) => {
-        const itemTotal = item.quantity * item.price;
-        total += itemTotal;
-        count += item.quantity;
-
-        // Create list item for each cart product
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `${item.name} x ${item.quantity} = $${itemTotal.toFixed(2)}`;
-
-        // Create "Reduce Quantity" button
-        const reduceButton = document.createElement('button');
-        reduceButton.textContent = '-';
-        reduceButton.style.width = '2rem'
-        reduceButton.style.fontSize = 'larger' 
-        reduceButton.style.borderRadius = '10px' 
-        reduceButton.style.border = 'none'
-        reduceButton.style.marginLeft = '10px'; // Optional styling
-        reduceButton.addEventListener('click', () => {
-            reduceQuantity(index);
-        });
-
-        // Append button to list item
-        listItem.appendChild(reduceButton);
-
-        // Append list item to cart list
-        cartItemsList.appendChild(listItem);
-    });
-
-    // Update item count and total price
-    itemCount.innerText = count;
-    orderTotal.innerText = total.toFixed(2);
-   //  renderPayPal(orderTotal)
-}
-
-function addToCart(name, price) {
-    const existingItem = cartItems.find(item => item.name === name);
-    if (existingItem) {
-        existingItem.quantity++;
-    } else {
-        cartItems.push({ name, quantity: 1, price }); // Start with quantity 1 for new items
-    }
-    updateCart();
-}
-
-function reduceQuantity(index) {
-    const item = cartItems[index];
-    if (item.quantity > 1) {
-        item.quantity--; // Reduce quantity by 1
-    } else {
-        cartItems.splice(index, 1); // Remove item from cart if quantity reaches 0
-    }
-    updateCart();
-}
+// let cartPopUp = document.getElementById('cartBtn');
+// let cart = document.getElementById('cart')
+// cart.style.display = 'none'
+// let cartClicked = false
+// function popUpCart(){
+//     cartClicked = !cartClicked
+//     if (cartClicked) {
+//         cart.style.display = 'block'
+//     } else{
+//         cart.style.display = 'none'
+//     }
+// }
+// cartPopUp.addEventListener('click', popUpCart)
 
 
-// // like reaction
-const heartIcons = document.querySelectorAll('.fa-heart');
-heartIcons.forEach(icon => {
-    icon.addEventListener('click', function() {
-        if (this.style.color === 'red') {
-            this.style.color = 'black';
-        }
-        else{
-            this.style.color = 'red';
-        }
-    })
+// const cartItems = [];
+// const orderTotal = document.getElementById('order-total');
+
+// function updateCart() {
+//     const cartItemsList = document.getElementById('lists');
+//     const itemCount = document.getElementById('item-count'); // Total item count element
+//    //  const orderTotal = document.getElementById('order-total'); // Total price element
+
+//     cartItemsList.innerHTML = ''; // Clear the cart list
+//     let total = 0;
+//     let count = 0;
+
+//     cartItems.forEach((item, index) => {
+//         const itemTotal = item.quantity * item.price;
+//         total += itemTotal;
+//         count += item.quantity;
+
+//         // Create list item for each cart product
+//         const listItem = document.createElement('li');
+//         listItem.innerHTML = `${item.name} x ${item.quantity} = $${itemTotal.toFixed(2)}`;
+
+//         // Create "Reduce Quantity" button
+//         const reduceButton = document.createElement('button');
+//         reduceButton.textContent = '-';
+//         reduceButton.style.width = '2rem'
+//         reduceButton.style.fontSize = 'larger' 
+//         reduceButton.style.borderRadius = '10px' 
+//         reduceButton.style.border = 'none'
+//         reduceButton.style.marginLeft = '10px'; // Optional styling
+//         reduceButton.addEventListener('click', () => {
+//             reduceQuantity(index);
+//         });
+
+//         // Append button to list item
+//         listItem.appendChild(reduceButton);
+
+//         // Append list item to cart list
+//         cartItemsList.appendChild(listItem);
+//     });
+
+//     // Update item count and total price
+//     itemCount.innerText = count;
+//     orderTotal.innerText = total.toFixed(2);
+//    //  renderPayPal(orderTotal)
+// }
+
+// function addToCart(name, price) {
+//     const existingItem = cartItems.find(item => item.name === name);
+//     if (existingItem) {
+//         existingItem.quantity++;
+//     } else {
+//         cartItems.push({ name, quantity: 1, price }); // Start with quantity 1 for new items
+//     }
+//     updateCart();
+// }
+
+// function reduceQuantity(index) {
+//     const item = cartItems[index];
+//     if (item.quantity > 1) {
+//         item.quantity--; // Reduce quantity by 1
+//     } else {
+//         cartItems.splice(index, 1); // Remove item from cart if quantity reaches 0
+//     }
+//     updateCart();
+// }
+
+
+// // // like reaction
+// const heartIcons = document.querySelectorAll('.fa-heart');
+// heartIcons.forEach(icon => {
+//     icon.addEventListener('click', function() {
+//         if (this.style.color === 'red') {
+//             this.style.color = 'black';
+//         }
+//         else{
+//             this.style.color = 'red';
+//         }
+//     })
     
-})
+// })
 
-// checkout
-const checkoutBtn = document.getElementById('checkout')
-checkoutBtn.addEventListener('click', () =>{
-    alert("Thank you for trying, no payment gateway yet. Check back later")
-})
+// // checkout
+// const checkoutBtn = document.getElementById('checkout')
+// checkoutBtn.addEventListener('click', () =>{
+//     alert("Thank you for trying, no payment gateway yet. Check back later")
+// })
 
 
 
